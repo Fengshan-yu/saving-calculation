@@ -23,6 +23,24 @@ try:
 except ValueError:
     print("Oops, it is not a valid number, try again.")
 
+def annuity(num4, num5):
+    an_result = power_saving(saving, num1,num2, num3)
+    for index in range(num5):
+        an_result = (an_result - num4)*(1+num2/100)
+    return an_result
+
+
+try:
+    print("Would you like to plan withdrawal after retirement?")
+    num4 = float(input("Enter annual withdrawal: "))
+    num5 = int(input("Your expectancy after retirement: "))
+
+    print("Your annuity leftover is:", int(annuity(num4, num5)))
+
+
+except ValueError:
+    print("Oops, it is not a valid number, try again.")
+
 finally:
     print("Processing Complete.")
 
